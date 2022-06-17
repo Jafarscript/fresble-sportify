@@ -1,0 +1,69 @@
+.competit{
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    padding: 20px 20px;
+    background-color: white;
+    z-index: 1000;
+    /* position: absolute; */
+    margin-top: -40px;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    max-width: 750px;
+}
+
+.container h4 strong{
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    color: #212529;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.card{
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 0.2rem;
+    box-shadow: 0 .4rem 1rem rgba(0,0,0,.175)!important;
+}
+.card:hover{
+    box-shadow: 0 .8rem 1.5rem rgba(0,0,0,.175)!important;
+    color: #262626;
+    cursor: pointer;
+}
+.card img{
+    max-width: 100px !important;
+    max-height: 90px !important;
+}
+
+.title{
+    margin-left: 10px;
+}
+
+.title h3{
+    color: #4d4d4d;
+    font-size: 1.5rem;
+    font-family: Montserrat,sans-serif;
+    font-weight: 400;
+    padding-right: 10px;
+}
+
+.title h5{
+    margin-top: 8px;
+    font-family: Montserrat,sans-serif;
+    font-size: 0.9rem;
+    font-weight: 100;
+    color: #7e7d7d;
+}
