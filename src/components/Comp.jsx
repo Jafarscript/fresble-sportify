@@ -1,18 +1,21 @@
 import React from 'react'
+import { useState, useEffect } from 'react';
+
 import './Comp.css'
-const Comp = ({league}) => 
+const Comp = ({league,selected,onSelect}) => 
 {
+  
 
  
   return (
-   <section className='competit'>
+   
      <div className='container'>
         <h4>
           <strong>All Competitions</strong>
         </h4>
        <div className='grid'>
-       {league.filter(comp => comp.emblemUrl !== null).map(comp => (
-        <div key={comp.id} className='card'>
+       {league.filter(comp => comp.plan === "TIER_ONE").map(comp => (
+        <div key={comp.id} className='card' onClick={() =>onSelect(comp.id)}>
           <img src={comp.emblemUrl} alt={comp.name} />
           <div className='title'>
             <h3>{comp.name}</h3>
@@ -22,7 +25,6 @@ const Comp = ({league}) =>
       ))}
        </div>
     </div>
-   </section>
   )
 }
 
