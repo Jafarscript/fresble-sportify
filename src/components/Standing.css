@@ -1,0 +1,21 @@
+.head{
+    display: flex;
+    align-items: center;
+}
+
+.fan-link{
+    text-decoration: none;
+    color: #292a2a;
+    -webkit-transition: -webkit-box-shadow .15s;
+    transition: -webkit-box-shadow .15s;
+    transition: box-shadow .15s;
+    transition: box-shadow .15s,-webkit-box-shadow .15s;
+    -webkit-box-shadow: inset 0 -2px 0 0 #347ab8;
+    box-shadow: inset 0 -2px 0 0 #347ab8;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.head span{
+    margin: 0 10px 0 10px;
+}

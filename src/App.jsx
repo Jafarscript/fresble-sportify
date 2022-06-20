@@ -11,10 +11,10 @@ import Standing from './components/Standing';
 
 function App() {
   const [leagues, setLeagues] = useState([]);
-  const [selected, setSelected] = useState('');
-  const handleSelection = (id) => {
+  const [selected, setSelected] = useState([]);
+  const handleSelection = (id,name) => {
    setSelected(id);
-   console.log(selected);
+  //  console.log(selected);
 };
 
   useEffect(() => {
@@ -28,21 +28,10 @@ function App() {
     fectchleague();
     
   }, [])
-  const [standing, setStanding] = useState([])
- 
 
-useEffect(() => {
-  const Token = 'cfabb657da514f678932d1aba856e8a1';
-  const URL = 'https://api.football-data.org/v2/competitions/' + selected + '/standings';
-  async function fectchleague() {
-    const response = await fetch(URL, { headers: { 'X-Auth-Token': Token } });
-    const result = await response.json();
-    setStanding(result);
-    console.log( "RESULT",result.standings);
-  }
-  fectchleague();
-  
-}, [selected])
+
+
+
 
   return (
 
@@ -54,12 +43,16 @@ useEffect(() => {
        </div>
       </header>
       <section className='competit'>
+      <div className='container'>
       <Routes>
       <Route path="/" exact element={<Comp league={leagues} selected={selected} onSelect={handleSelection}/>}>
       {/* <Comp league={leagues}/> */}
       </Route>
-      <Route path={`/${selected}`} element={<Standing league={leagues} selected={selected} onSelect={handleSelection}/>}></Route>
+      <Route path='/standing' element={
+      <Standing  league={leagues} selected={selected} onSelect={handleSelection}/>}
+      ></Route>
       </Routes>
+      </div>
       </section>
     </div>
     </Router>
