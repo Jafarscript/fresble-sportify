@@ -1,28 +1,3 @@
-.competit{
-    display: flex;
-    justify-content: center;
-}
-
-.container{
-    padding: 20px 20px;
-    background-color: white;
-    z-index: 1000;
-    /* position: absolute; */
-    margin-top: -40px;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: 0.25rem;
-    max-width: 750px;
-}
-
-.container h4 strong{
-    font-family: Montserrat,sans-serif;
-    font-weight: 400;
-    font-size: 1.8rem;
-    line-height: 1.2;
-    color: #212529;
-}
 
 .grid{
     display: grid;

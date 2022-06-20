@@ -28,27 +28,28 @@ console.log( "RESULT", standing);
         <span>/</span>
        <div>
        {league.filter(comp => comp.id === selected).map(comp =>(
-        <h3 key={comp.id}>{comp.name}</h3>
+        <h3 key={comp.id} className='compName'>{comp.name}</h3>
       ))}
        </div>
       </div>
       {league.filter(comp => comp.id === selected).map(comp =>(
-        <h3 key={comp.id}>{comp.name}</h3>
+        <h3 key={comp.id} className='title'>{comp.name}</h3>
       ))}
-      <div className="table-responsive mt-5">
-      <table>
+      <div className="table-responsive">
+      <table className="table">
           <thead>
             <tr>
               <th className="position"></th>
               <th className="team" colSpan="2">
                 Team
               </th>
-              <th className="played">Played</th>
-              <th className="won">Won</th>
-              <th className="draw">Draw</th>
-              <th className="lost">Lost</th>
+              <th className="played">MP</th>
+              <th className="won">W</th>
+              <th className="draw">D</th>
+              <th className="lost">L</th>
+              <th className="gf">GF</th>
               <th className="ga">GA</th>
-              <th className="points">Points</th>
+              <th className="points">Pts</th>
             </tr>
             {standing.map(stands => (
               <tr key={stands.position}>
@@ -61,14 +62,6 @@ console.log( "RESULT", standing);
                 <td>{stands.lost}</td>
                 <td>{stands.goalsFor}</td>
                 <td>{stands.goalsAgainst}</td>
-                <td>{stands.goalDifference}</td>
-                <td>{stands.points}</td><td>{stands.playedGames}</td>
-                <td>{stands.won}</td>
-                <td>{stands.draw}</td>
-                <td>{stands.lost}</td>
-                <td>{stands.goalsFor}</td>
-                <td>{stands.goalsAgainst}</td>
-                <td>{stands.goalDifference}</td>
                 <td>{stands.points}</td>
               </tr>
             ))}

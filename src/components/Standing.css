@@ -1,11 +1,15 @@
 .head{
     display: flex;
     align-items: center;
+    margin-bottom: 1rem!important;
 }
-
+.head span{
+    font-size: 25px;
+}
 .fan-link{
     text-decoration: none;
     color: #292a2a;
+    font-size: 20px;
     -webkit-transition: -webkit-box-shadow .15s;
     transition: -webkit-box-shadow .15s;
     transition: box-shadow .15s;
@@ -15,7 +19,70 @@
     cursor: pointer;
     padding: 5px;
 }
-
+.fan-link:hover{
+    box-shadow: inset 0 -35px 0 0 #347ab8;
+    color: #ffffff;
+}
+.compName{
+    color: #6c757d!important;
+    font-family: Poppins,sans-serif;
+    font-weight: 100;
+}
 .head span{
     margin: 0 10px 0 10px;
+}
+
+.table-responsive{
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.275)!important;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin-top: 20px;
+    margin-bottom: 2rem;
+    padding: 50px 50px;
+    width: fit-content;
+}
+
+.table td, .table th {
+    padding: .25rem;
+    text-align: left;
+}
+.table td, .table th{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    border-bottom: 0.5px solid #dedede;
+}
+.table td{
+    font-size: 20px;
+    color: #212529;
+}
+.table th{
+    font-size: 20px;
+    font-weight: 500;
+    font-family: Poppins,sans-serif;
+    color: #6c757d!important;
+}
+.table .position {
+    width: 5%;
+}
+
+
+.table .badge-td {
+    width: 5%;
+}
+
+.badge img{
+    min-width: 30px;
+    width: 50px;
+    max-width: 30px;
+    margin-right: 10px;
+}
+
+.title{
+    color:#347ab8!important ;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    line-height: 1.2;
 }
